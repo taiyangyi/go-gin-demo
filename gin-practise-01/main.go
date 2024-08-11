@@ -14,10 +14,10 @@ func main() {
 	// 当客户端以GET方法请求/ping路径时，会执行后面的匿名函数
 	r.GET("/ping", func(ctx *gin.Context) {
 		ctx.JSON(http.StatusOK, gin.H{
-			"msg": "pong",
+			"msg": "8090 pong",
 		})
 	})
 
 	// 启动HTTP服务，默认在0.0.0.0:8080启动服务,也可以指定端口号r.Run(":8000")
-	r.Run()
+	r.Run(":8090")
 }
